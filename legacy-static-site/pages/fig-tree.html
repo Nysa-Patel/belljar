@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Fig Tree — Under the Glass</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header id="site-header"></header>
+
+<main class="wide">
+  <h1>The Fig Tree</h1>
+  <p id="page-intro"></p>
+  <p id="instructions" class="muted"></p>
+
+  <div class="fig-tree-wrap">
+    <svg id="fig-tree-svg" class="fig-tree-svg" viewBox="0 0 400 420" role="group"
+         aria-label="A fig tree with six figs, each a possible future. Choose one before it drops."></svg>
+    <p class="fig-timer" id="fig-timer" aria-live="polite"></p>
+    <div class="fig-controls">
+      <button id="wait-btn" type="button" hidden></button>
+      <button id="try-again-btn" type="button" hidden></button>
+    </div>
+    <div class="fig-reflection" id="fig-reflection" hidden aria-live="polite"></div>
+  </div>
+
+  <section class="section-block">
+    <h2>Why this mechanic</h2>
+    <p id="closing-note"></p>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="footer-inner" id="site-footer"></div></footer>
+
+<script src="../content.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/fig-tree.js"></script>
+</body>
+</html>
