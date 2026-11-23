@@ -94,32 +94,32 @@ const CONTENT = {
       {
         id: "poet",
         label: "Famous Poet",
-        closes: "Choosing the poet means giving up the steadiness of a conventional career — and the version of herself that doesn't need to be exceptional to feel safe."
+        closes: "In choosing the poet, she won't get the stability of a regular job, and the version of herself who doesn't need to be extraordinary to be comfortable."
       },
       {
         id: "professor",
         label: "Brilliant Professor",
-        closes: "Choosing the professor trades the uncertainty of art for the structure of a department — and quietly closes the door on being the one everyone studies, rather than the one who studies."
+        closes: "Choosing the professor means trading the uncertainty of art for the orderliness of a department."
       },
       {
         id: "wife",
         label: "Wife and Mother",
-        closes: "Choosing this fig, in Esther's world, is presented as closing every other fig at once — the one 'choice' her culture keeps insisting isn't really optional."
+        closes: "Choosing this fig, in Esther's world, is shown as choosing to close all other figs at once — the only \"choice\" that her culture insists is not a choice at all."
       },
       {
         id: "editor",
         label: "Brilliant Editor",
-        closes: "Choosing the editor keeps her near the work she loves without being the author of it — proximity to brilliance instead of being the brilliant one."
+        closes: "Choosing the editor allows her to stay close to what she loves without writing it. In other words, closeness to genius without having to be the genius."
       },
       {
         id: "traveler",
         label: "World Traveler",
-        closes: "Choosing to travel means putting down roots nowhere — trading the comfort (and confinement) of a fixed life for a freedom that can also be loneliness."
+        closes: "Choosing to travel means choosing never to put down roots anywhere. She will exchange the security of a settled life for a freedom that can be lonely."
       },
       {
         id: "unknown",
         label: "???",
-        closes: "This is the fig she can't quite make out — the future with no name yet. Choosing it means admitting she doesn't have to know the ending before she starts."
+        closes: "The future which does not yet have a name. In choosing it, she admits that she does not have to know how the story ends before she begins."
       }
     ],
     reflections: {
