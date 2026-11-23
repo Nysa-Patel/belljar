@@ -31,14 +31,24 @@ export default function Layout({ children, sources = [], mainClassName = "" }) {
     <>
       <header className="site-header">
         <nav className="site-nav" aria-label="Primary">
-          <Link className="brand" to="/">{CONTENT.site.title}</Link>
+          <Link
+            className="brand"
+            to="/"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          >
+            {CONTENT.site.title}
+          </Link>
           <ul>
             {CONTENT.site.nav.map((item) => (
               <li key={item.href}>
                 <NavLink
                   to={item.href}
                   end={item.href === "/"}
-                  state={item.href === "/" ? { scrollTo: "enter" } : undefined}
+                  onClick={
+                    item.href === "/"
+                      ? () => window.scrollTo({ top: 0, behavior: "smooth" })
+                      : undefined
+                  }
                 >
                   {item.label}
                 </NavLink>

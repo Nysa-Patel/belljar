@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
 import { useReducedMotion, useMotionValue, animate } from "framer-motion";
 import Layout from "../components/Layout";
 import BellJar from "../components/BellJar";
@@ -21,7 +20,6 @@ export default function Home() {
   const scroll = useHeroJarScroll();
   const staticLift = useMotionValue(0);
   const staticFog = useMotionValue(0.5);
-  const location = useLocation();
 
   // Reduced motion skips the scroll-linked lift, but should still settle to
   // fully clear once — a single bounded fade, not continuous scroll motion.
@@ -32,14 +30,6 @@ export default function Home() {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [reduced]);
-
-  // The nav's Home link requests landing on "Three ways in" (via location
-  // state) instead of the hero — runs after ScrollToTop's own scroll-to-0.
-  useEffect(() => {
-    if (location.state?.scrollTo) {
-      scrollToSection(location.state.scrollTo);
-    }
-  }, [location.state]);
 
   return (
     <Layout sources={[]}>
