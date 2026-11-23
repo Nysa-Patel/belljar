@@ -240,39 +240,39 @@ const CONTENT = {
     entries: [
       {
         id: "britannica-bell-jar",
-        mla: "\"The Bell Jar.\" Encyclopaedia Britannica, www.britannica.com/topic/The-Bell-Jar. Accessed 22 Nov. 2026."
+        mla: "\"The Bell Jar.\" _Encyclopaedia Britannica_, www.britannica.com/topic/The-Bell-Jar. Accessed 22 Nov. 2026."
       },
       {
         id: "smith-rarebook-plath",
-        mla: "\"The Bell Jar.\" Sylvia Plath: A Comprehensive Bibliography, Smith College Libraries Special Collections, www.smith.edu/libraries/libs/rarebook/exhibitions/conway/belljar.htm. Accessed 22 Nov. 2026."
+        mla: "\"The Bell Jar.\" _Sylvia Plath: A Comprehensive Bibliography_, Smith College Libraries Special Collections, www.smith.edu/libraries/libs/rarebook/exhibitions/conway/belljar.htm. Accessed 22 Nov. 2026."
       },
       {
         id: "poetry-foundation-bell-jar-40",
-        mla: "Gould, Emily. \"The Bell Jar at Forty.\" Poetry Foundation, www.poetryfoundation.org/articles/69721/the-bell-jar-at-40. Accessed 22 Nov. 2026."
+        mla: "Gould, Emily. \"The Bell Jar at Forty.\" _Poetry Foundation_, www.poetryfoundation.org/articles/69721/the-bell-jar-at-40. Accessed 22 Nov. 2026."
       },
       {
         id: "fluckiger-alliance-2018",
-        mla: "Flückiger, Christoph, et al. \"The Alliance in Adult Psychotherapy: A Meta-Analytic Synthesis.\" Psychotherapy, vol. 55, no. 4, 2018, pp. 316-340."
+        mla: "Flückiger, Christoph, et al. \"The Alliance in Adult Psychotherapy: A Meta-Analytic Synthesis.\" _Psychotherapy_, vol. 55, no. 4, 2018, pp. 316-340."
       },
       {
         id: "kff-hpsa-2025",
-        mla: "KFF. \"Mental Health Care Health Professional Shortage Areas (HPSAs).\" 31 Dec. 2025, www.kff.org/mental-health/state-indicator/mental-health-care-health-professional-shortage-areas-hpsas/. Accessed 22 Nov. 2026."
+        mla: "KFF. \"Mental Health Care Health Professional Shortage Areas (HPSAs).\" _KFF_, 31 Dec. 2025, www.kff.org/mental-health/state-indicator/mental-health-care-health-professional-shortage-areas-hpsas/. Accessed 22 Nov. 2026."
       },
       {
         id: "mayo-ect",
-        mla: "Mayo Clinic. \"Electroconvulsive Therapy (ECT).\" Mayo Clinic, Mayo Foundation for Medical Education and Research, www.mayoclinic.org/tests-procedures/electroconvulsive-therapy/about/pac-20393894. Accessed 22 Nov. 2026."
+        mla: "Mayo Clinic. \"Electroconvulsive Therapy (ECT).\" _Mayo Clinic_, Mayo Foundation for Medical Education and Research, www.mayoclinic.org/tests-procedures/electroconvulsive-therapy/about/pac-20393894. Accessed 22 Nov. 2026."
       },
       {
         id: "pescosolido-stigma-2021",
-        mla: "Pescosolido, Bernice A., et al. \"Trends in Public Stigma of Mental Illness in the US, 1996-2018.\" JAMA Network Open, vol. 4, no. 12, 21 Dec. 2021, doi:10.1001/jamanetworkopen.2021.40202."
+        mla: "Pescosolido, Bernice A., et al. \"Trends in Public Stigma of Mental Illness in the US, 1996-2018.\" _JAMA Network Open_, vol. 4, no. 12, 21 Dec. 2021, doi:10.1001/jamanetworkopen.2021.40202."
       },
       {
         id: "plath-bell-jar",
-        mla: "Plath, Sylvia. The Bell Jar. Faber and Faber, 2001."
+        mla: "Plath, Sylvia. _The Bell Jar_. Faber and Faber, 2001."
       },
       {
         id: "hrsa-behavioral-health-2025",
-        mla: "United States, Health Resources and Services Administration, Bureau of Health Workforce. Behavioral Health Workforce Brief 2025. Dec. 2025, bhw.hrsa.gov/sites/default/files/bureau-health-workforce/data-research/Behavioral-Health-Workforce-Brief-2025.pdf."
+        mla: "United States, Health Resources and Services Administration, Bureau of Health Workforce. _Behavioral Health Workforce Brief 2025_. Dec. 2025, bhw.hrsa.gov/sites/default/files/bureau-health-workforce/data-research/Behavioral-Health-Workforce-Brief-2025.pdf."
       }
     ],
     imageCreditsHeading: "Image credits",

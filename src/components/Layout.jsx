@@ -9,9 +9,15 @@ import BackToTop from "./BackToTop";
 // restoring its last-selected stop). Jumping instantly, then re-asserting
 // it a couple of times shortly after, wins that race reliably.
 function goToTop() {
-  window.scrollTo(0, 0);
-  requestAnimationFrame(() => window.scrollTo(0, 0));
-  setTimeout(() => window.scrollTo(0, 0), 100);
+  function toEnter() {
+    const node = document.getElementById("enter");
+    if (node) node.scrollIntoView({ behavior: "auto", block: "start" });
+    else window.scrollTo(0, 0);
+  }
+  toEnter();
+  requestAnimationFrame(toEnter);
+  setTimeout(toEnter, 100);
+  setTimeout(toEnter, 350);
 }
 
 function SourcesList({ ids }) {
