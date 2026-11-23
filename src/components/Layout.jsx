@@ -1,6 +1,16 @@
 import { NavLink, Link } from "react-router-dom";
 import CONTENT from "../content";
 
+// Plain window.scrollTo(0,0) can get cut short mid-animation by another
+// component's own scrollIntoView firing on the same tick (e.g. a section
+// restoring its last-selected stop). Jumping instantly, then re-asserting
+// it a couple of times shortly after, wins that race reliably.
+function goToTop() {
+  window.scrollTo(0, 0);
+  requestAnimationFrame(() => window.scrollTo(0, 0));
+  setTimeout(() => window.scrollTo(0, 0), 100);
+}
+
 function SourcesList({ ids }) {
   const entries = (ids || [])
     .map((id) => CONTENT.worksCited.entries.find((e) => e.id === id))
@@ -31,11 +41,7 @@ export default function Layout({ children, sources = [], mainClassName = "" }) {
     <>
       <header className="site-header">
         <nav className="site-nav" aria-label="Primary">
-          <Link
-            className="brand"
-            to="/"
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          >
+          <Link className="brand" to="/" onClick={goToTop}>
             {CONTENT.site.title}
           </Link>
           <ul>
@@ -44,11 +50,7 @@ export default function Layout({ children, sources = [], mainClassName = "" }) {
                 <NavLink
                   to={item.href}
                   end={item.href === "/"}
-                  onClick={
-                    item.href === "/"
-                      ? () => window.scrollTo({ top: 0, behavior: "smooth" })
-                      : undefined
-                  }
+                  onClick={item.href === "/" ? goToTop : undefined}
                 >
                   {item.label}
                 </NavLink>
