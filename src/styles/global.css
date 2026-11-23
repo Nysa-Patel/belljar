@@ -285,7 +285,11 @@ button.enter-card { width: 100%; text-align: left; font: inherit; }
 
 /* ===== Works cited ===== */
 .cite-list { list-style: none; padding: 0; }
-.cite-list li { padding: 0.9rem 0; border-bottom: 1px solid var(--color-line); }
+.cite-list li {
+  padding: 0.9rem 0 0.9rem 2em;
+  text-indent: -2em;
+  border-bottom: 1px solid var(--color-line);
+}
 
 /* ===== Utility ===== */
 .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
