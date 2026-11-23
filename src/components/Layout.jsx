@@ -9,6 +9,13 @@ import BackToTop from "./BackToTop";
 // restoring its last-selected stop). Jumping instantly, then re-asserting
 // it a couple of times shortly after, wins that race reliably.
 function goToTop() {
+  window.scrollTo(0, 0);
+  requestAnimationFrame(() => window.scrollTo(0, 0));
+  setTimeout(() => window.scrollTo(0, 0), 100);
+  setTimeout(() => window.scrollTo(0, 0), 350);
+}
+
+function goToEnter() {
   function toEnter() {
     const node = document.getElementById("enter");
     if (node) node.scrollIntoView({ behavior: "auto", block: "start" });
@@ -59,7 +66,7 @@ export default function Layout({ children, sources = [], mainClassName = "" }) {
                 <NavLink
                   to={item.href}
                   end={item.href === "/"}
-                  onClick={item.href === "/" ? goToTop : undefined}
+                  onClick={item.href === "/" ? goToEnter : undefined}
                 >
                   {item.label}
                 </NavLink>
