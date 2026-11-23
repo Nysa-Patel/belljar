@@ -22,6 +22,35 @@
   :root { --speed: 0s; }
 }
 
+/* Dark theme — same tokens, re-pointed. Toggled via [data-theme] on <html>. */
+:root[data-theme="dark"] {
+  --color-bg: #1c1a17;
+  --color-paper: #262220;
+  --color-ink: #f0e9dd;
+  --color-ink-soft: #cabfae;
+  --color-muted: #8f8577;
+  --color-accent-pink: #d9a8b3;
+  --color-accent-blue: #9fbdce;
+  --color-accent-gold: #c79a4b;
+  --color-line: #3a3530;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-bg: #1c1a17;
+    --color-paper: #262220;
+    --color-ink: #f0e9dd;
+    --color-ink-soft: #cabfae;
+    --color-muted: #8f8577;
+    --color-accent-pink: #d9a8b3;
+    --color-accent-blue: #9fbdce;
+    --color-accent-gold: #c79a4b;
+    --color-line: #3a3530;
+  }
+}
+:root, :root[data-theme="dark"], :root[data-theme="light"] {
+  transition: background-color var(--speed) ease, color var(--speed) ease;
+}
+
 /* ===== Reset ===== */
 * { box-sizing: border-box; }
 html, body, #root { margin: 0; padding: 0; }
@@ -90,6 +119,48 @@ button:disabled { opacity: 0.5; cursor: default; }
 .site-nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 1rem 1.25rem; margin: 0; padding: 0; }
 .site-nav a { text-decoration: none; font-size: 0.92rem; color: var(--color-ink-soft); }
 .site-nav a.active { color: var(--color-ink); border-bottom: 2px solid var(--color-accent-gold); }
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  padding: 0;
+  border-radius: 999px;
+  border: 1px solid var(--color-line);
+  background: var(--color-bg);
+  flex: 0 0 auto;
+}
+.theme-toggle:hover { background: var(--color-bg); border-color: var(--color-ink-soft); }
+.theme-toggle svg { width: 1.1rem; height: 1.1rem; stroke: var(--color-ink); fill: none; stroke-width: 1.8; }
+
+.back-to-top {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 45;
+  width: 2.6rem;
+  height: 2.6rem;
+  padding: 0;
+  border-radius: 999px;
+  background: var(--color-paper);
+  border: 1px solid var(--color-line);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+.back-to-top:hover { background: var(--color-paper); border-color: var(--color-ink-soft); }
+.back-to-top svg { width: 1.2rem; height: 1.2rem; stroke: var(--color-ink); fill: none; stroke-width: 2; margin: 0 auto; }
+
+/* Scroll progress rail — sits along the bottom edge of the sticky header */
+.scroll-progress-bar {
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: var(--color-accent-gold);
+  transform-origin: left;
+}
 
 main { max-width: var(--max-width); margin: 0 auto; padding: 2.5rem 1.25rem 4rem; position: relative; }
 main.wide { max-width: 980px; }

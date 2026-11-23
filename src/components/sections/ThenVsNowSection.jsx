@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Reveal from "../Reveal";
 import CONTENT from "../../content";
 
 export default function ThenVsNowSection() {
@@ -8,7 +9,7 @@ export default function ThenVsNowSection() {
   const [openId, setOpenId] = useState(null);
 
   return (
-    <section id="then-vs-now" className="home-section">
+    <Reveal as="section" id="then-vs-now" className="home-section">
       <h2>Then vs. Now</h2>
       <p>{c.intro}</p>
 
@@ -69,6 +70,6 @@ export default function ThenVsNowSection() {
         </h3>
         <p>{c.whatHasntChanged.body}</p>
       </div>
-    </section>
+    </Reveal>
   );
 }

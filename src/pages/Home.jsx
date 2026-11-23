@@ -3,6 +3,7 @@ import { useReducedMotion, useMotionValue, animate } from "framer-motion";
 import Layout from "../components/Layout";
 import BellJar from "../components/BellJar";
 import FogOverlay from "../components/FogOverlay";
+import Reveal from "../components/Reveal";
 import FigTreeSection from "../components/sections/FigTreeSection";
 import JarMeterSection from "../components/sections/JarMeterSection";
 import ThenVsNowSection from "../components/sections/ThenVsNowSection";
@@ -54,24 +55,26 @@ export default function Home() {
 
       <p>{c.intro}</p>
 
-      <section className="content-note" aria-labelledby="content-note-heading">
+      <Reveal as="section" className="content-note" aria-labelledby="content-note-heading">
         <h2 id="content-note-heading">{c.contentNoteHeading}</h2>
         <p>{c.contentNote}</p>
-      </section>
+      </Reveal>
 
       <section id="enter">
         <h2>{c.enterHeading}</h2>
         <div className="enter-grid">
-          {c.enter.map((card) => (
-            <button
+          {c.enter.map((card, i) => (
+            <Reveal
+              as="button"
               key={card.target}
               type="button"
               className="enter-card"
               onClick={() => scrollToSection(card.target)}
+              delay={i * 0.08}
             >
               <h3>{card.title}</h3>
               <p>{card.teaser}</p>
-            </button>
+            </Reveal>
           ))}
         </div>
       </section>

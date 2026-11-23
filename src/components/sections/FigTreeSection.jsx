@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useReducedMotion } from "framer-motion";
+import Reveal from "../Reveal";
 import CONTENT from "../../content";
 
 const POSITIONS = [
@@ -89,7 +90,7 @@ export default function FigTreeSection() {
   const chosenFig = figs.find((f) => f.id === chosenId);
 
   return (
-    <section id="fig-tree" className="home-section">
+    <Reveal as="section" id="fig-tree" className="home-section">
       <h2>The Fig Tree</h2>
       <p>{c.intro}</p>
       <p className="muted">{c.instructions}</p>
@@ -181,6 +182,6 @@ export default function FigTreeSection() {
       </div>
 
       <p className="muted">{c.closingNote}</p>
-    </section>
+    </Reveal>
   );
 }

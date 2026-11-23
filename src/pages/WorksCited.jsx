@@ -1,4 +1,5 @@
 import Layout from "../components/Layout";
+import Reveal from "../components/Reveal";
 import CONTENT from "../content";
 
 export default function WorksCited() {
@@ -8,8 +9,8 @@ export default function WorksCited() {
       <h1>Works Cited</h1>
       {c.intro && <p>{c.intro}</p>}
       <ul className="cite-list">
-        {c.entries.map((e) => (
-          <li key={e.id}>{e.mla}</li>
+        {c.entries.map((e, i) => (
+          <Reveal as="li" key={e.id} delay={Math.min(i * 0.04, 0.3)}>{e.mla}</Reveal>
         ))}
       </ul>
 

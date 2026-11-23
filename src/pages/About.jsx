@@ -1,4 +1,5 @@
 import Layout from "../components/Layout";
+import Reveal from "../components/Reveal";
 import CONTENT from "../content";
 
 export default function About() {
@@ -8,10 +9,10 @@ export default function About() {
       <h1>{c.title}</h1>
       {c.intro && <p>{c.intro}</p>}
       {c.sections.map((s, i) => (
-        <section className="section-block" key={s.heading || i}>
+        <Reveal as="section" className="section-block" key={s.heading || i} delay={i * 0.05}>
           {s.heading && <h2>{s.heading}</h2>}
           <p>{s.body}</p>
-        </section>
+        </Reveal>
       ))}
     </Layout>
   );

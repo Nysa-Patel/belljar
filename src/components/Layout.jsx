@@ -1,5 +1,8 @@
 import { NavLink, Link } from "react-router-dom";
 import CONTENT from "../content";
+import ThemeToggle from "./ThemeToggle";
+import ScrollProgress from "./ScrollProgress";
+import BackToTop from "./BackToTop";
 
 // Plain window.scrollTo(0,0) can get cut short mid-animation by another
 // component's own scrollIntoView firing on the same tick (e.g. a section
@@ -57,7 +60,9 @@ export default function Layout({ children, sources = [], mainClassName = "" }) {
               </li>
             ))}
           </ul>
+          <ThemeToggle />
         </nav>
+        <ScrollProgress />
       </header>
 
       <main className={mainClassName}>{children}</main>
@@ -70,6 +75,8 @@ export default function Layout({ children, sources = [], mainClassName = "" }) {
           </div>
         </div>
       </footer>
+
+      <BackToTop />
     </>
   );
 }

@@ -1,4 +1,5 @@
 import Layout from "../components/Layout";
+import Reveal from "../components/Reveal";
 import CONTENT from "../content";
 
 export default function PlathEsther() {
@@ -8,14 +9,14 @@ export default function PlathEsther() {
     <Layout sources={c.sourcesUsed}>
       <h1>{c.title}</h1>
       <p>{c.intro}</p>
-      {c.sections.map((s) => (
-        <section className="section-block" key={s.heading}>
+      {c.sections.map((s, i) => (
+        <Reveal as="section" className="section-block" key={s.heading} delay={i * 0.05}>
           <h2>
             {s.heading}
             {s.needsSource && <span className="needs-source">{flag}</span>}
           </h2>
           <p>{s.body}</p>
-        </section>
+        </Reveal>
       ))}
     </Layout>
   );

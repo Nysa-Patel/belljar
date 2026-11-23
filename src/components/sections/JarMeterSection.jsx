@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useMotionValue, useReducedMotion, animate } from "framer-motion";
 import BellJar from "../BellJar";
+import Reveal from "../Reveal";
 import CONTENT from "../../content";
 
 export default function JarMeterSection() {
@@ -33,7 +34,7 @@ export default function JarMeterSection() {
   const ch = chapters[current];
 
   return (
-    <section id="jar-meter" className="home-section">
+    <Reveal as="section" id="jar-meter" className="home-section">
       <h2>The Jar Meter</h2>
       <p>{c.intro}</p>
 
@@ -60,6 +61,6 @@ export default function JarMeterSection() {
           </button>
         ))}
       </div>
-    </section>
+    </Reveal>
   );
 }
