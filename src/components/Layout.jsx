@@ -31,7 +31,7 @@ export default function Layout({ children, sources = [], mainClassName = "" }) {
     <>
       <header className="site-header">
         <nav className="site-nav" aria-label="Primary">
-          <Link className="brand" to="/" state={{ scrollTo: "enter" }}>{CONTENT.site.title}</Link>
+          <Link className="brand" to="/">{CONTENT.site.title}</Link>
           <ul>
             {CONTENT.site.nav.map((item) => (
               <li key={item.href}>

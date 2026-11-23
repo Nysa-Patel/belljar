@@ -89,7 +89,7 @@ const CONTENT = {
     instructions: "Choose one of the fruits before they fall off; either way, something is lost.",
     waitButtonLabel: "Wait",
     tryAgainLabel: "Try again",
-    timerSeconds: 18,
+    timerSeconds: 10,
     figs: [
       {
         id: "poet",
